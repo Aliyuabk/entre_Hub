@@ -1,0 +1,964 @@
+
+        const topicsData = [
+            {
+                id: 1,
+                title: "Introduction to Entrepreneurship",
+                shortTitle: "Introduction",
+                icon: "🚀",
+                gradient: "from-blue-500 to-cyan-400",
+                description: "Fundamentals, technopreneurship, and entrepreneurial orientation",
+                questions: [
+                    {q: "Technopreneurs are entrepreneurs who used _____ as their driving force in transforming resources into goods and services.", options: ["Technology", "Internet", "Computers"], correct: 0, explanation: "Technopreneurs specifically leverage technology as their core transformation engine."},
+                    {q: "_____ are entrepreneurs that engage in activities due to their parental background.", options: ["Necessity-driven", "Life-style", "Spin-offs"], correct: 2, explanation: "Spin-offs enter business influenced by family background and resources."},
+                    {q: "Which is NOT an entrepreneurial orientation dimension?", options: ["Innovativeness", "Proactiveness", "Locus of control"], correct: 2, explanation: "The three dimensions are Innovativeness, Proactiveness, and Risk-taking."},
+                    {q: "Name two successful Nigerian entrepreneurs.", type: "fill", answer: "Aliko Dangote and Mike Adenuga", explanation: "Dangote (manufacturing) and Adenuga (telecom/oil) are renowned Nigerian business leaders."},
+                    {q: "_____ is entrepreneurship practiced by employees within an existing organization.", type: "fill", answer: "Intrapreneurship", explanation: "Intrapreneurs act like entrepreneurs but within established companies."},
+                    {q: "Name three Nigerian government agencies supporting SMEs.", type: "list", items: ["SMEDAN", "NIDB", "BOI"], explanation: "SMEDAN develops SMEs, NIDB provides industrial financing, BOI offers development funding."},
+                    {q: "Walter (1989) identified three linked attributes of entrepreneurship.", type: "theory", points: ["Innovation - creating something new", "Risk-taking - accepting uncertainty", "Proactiveness - taking initiative"], explanation: "These three attributes define core entrepreneurial behavior."},
+                    {q: "List five types of entrepreneurship.", type: "list", items: ["Small business", "Scalable startup", "Large company", "Social entrepreneurship", "Technopreneurship", "Intrapreneurship"], explanation: "These cover the spectrum from local businesses to corporate innovation."},
+                    {q: "Differentiate Entrepreneur vs Technopreneur.", type: "compare", left: ["General business skills", "Any industry focus", "Traditional approach"], right: ["Technology as driver", "Tech-based ventures", "Innovation-focused"], explanation: "Technopreneurs specifically leverage technology for competitive advantage."},
+                    {q: "List five obstacles to entrepreneurship in Nigeria.", type: "list", items: ["Poor infrastructure", "Inadequate funding", "Unfavorable policies", "High business costs", "Corruption"], explanation: "Systemic challenges hinder entrepreneurial growth in Nigeria."}
+                ]
+            },
+            {
+                id: 2,
+                title: "Business Ideas & Opportunities",
+                shortTitle: "Ideas",
+                icon: "💡",
+                gradient: "from-yellow-500 to-orange-400",
+                description: "Opportunity recognition, evaluation models, and RAMP framework",
+                questions: [
+                    {q: "_____ can be sold and attract investors.", options: ["Business idea", "Business opportunity", "Evaluation"], correct: 1, explanation: "Opportunities are refined, viable concepts ready for investment."},
+                    {q: "Every successful business must start as _____.", options: ["An idea", "An opportunity", "A concept"], correct: 0, explanation: "All ventures begin as ideas before development."},
+                    {q: "An opportunity is a refined concept researched by experts.", options: ["True", "False"], correct: 0, explanation: "True - Opportunities are researched and validated ideas."},
+                    {q: "_____ is a concept used to make money or add value.", type: "fill", answer: "Business idea", explanation: "Ideas are the foundation of value creation."},
+                    {q: "Three considerations for successful business ideas:", type: "list", items: ["Market need", "Feasibility", "Profitability"], explanation: "These ensure demand, execution capability, and financial viability."},
+                    {q: "_____ is an idea scrutinized and packaged for commercial launch.", type: "fill", answer: "Business opportunity", explanation: "Opportunities are market-ready, validated concepts."},
+                    {q: "Differentiate: Business Idea vs Opportunity vs Evaluation.", type: "theory", points: ["Idea: Income-generating concept", "Opportunity: Refined, viable venture", "Evaluation: Assessing opportunity potential"], explanation: "Shows progression from concept to actionable venture."},
+                    {q: "Five sources of business opportunities in Nigeria:", type: "list", items: ["Market research", "Government policies", "Technology changes", "Social trends", "Competition analysis"], explanation: "Multiple channels reveal viable business openings."},
+                    {q: "Explain the RAMP model.", type: "theory", points: ["R: Resources available", "A: Ability to execute", "M: Motivation", "P: Process for implementation"], explanation: "RAMP assesses readiness to pursue opportunities."},
+                    {q: "Five forms of business opportunities:", type: "list", items: ["Product-based", "Service-based", "Franchise", "Online/digital", "Manufacturing"], explanation: "Different categories of commercial opportunities."}
+                ]
+            },
+            {
+                id: 3,
+                title: "Entrepreneurship Theories",
+                shortTitle: "Theories",
+                icon: "📚",
+                gradient: "from-purple-500 to-pink-400",
+                description: "Schumpeter, McClelland, Weber, and economic theories",
+                questions: [
+                    {q: "_____ is the main theme of Schumpeter's theory.", options: ["Innovator", "Innovation", "Opportunity"], correct: 1, explanation: "Schumpeter emphasized innovation as the engine of development."},
+                    {q: "_____ theory: entrepreneurial drive from feeling disrespected by society.", options: ["Status withdrawal", "Social behavior", "Resourcefulness"], correct: 0, explanation: "Status withdrawal suggests marginalization motivates entrepreneurship."},
+                    {q: "_____ theory: resource availability motivates entrepreneurship.", options: ["Economic", "Resourcefulness", "Psychological"], correct: 0, explanation: "Economic theory emphasizes material incentives and resources."},
+                    {q: "One creative thing entrepreneurs do is _____.", type: "fill", answer: "innovation", explanation: "Innovation is the creative core of entrepreneurship."},
+                    {q: "Economic theory: motivation comes from _____ and _____.", type: "fill", answer: "profit and wealth creation", explanation: "Financial incentives drive economic entrepreneurship theories."},
+                    {q: "Social change theory: success affected by _____ and _____.", type: "fill", answer: "culture and social values", explanation: "Social context shapes entrepreneurial outcomes."},
+                    {q: "Compare Frank Young vs Max Weber.", type: "compare", left: ["Young: Social change, group factors"], right: ["Weber: Protestant ethic, individual motivation"], explanation: "Young focuses on collective dynamics; Weber on individual ethics."},
+                    {q: "Hoselitz's theory of leadership:", type: "theory", points: ["Requires organizing, directing, coordinating resources effectively"], explanation: "Leadership capabilities essential for entrepreneurs."},
+                    {q: "Drucker's systematic innovation:", type: "theory", points: ["Innovation as organized activity with seven opportunity sources"], explanation: "Innovation should be disciplined and systematic."},
+                    {q: "McClelland's three needs:", type: "list", items: ["Achievement (nAch)", "Affiliation (nAff)", "Power (nPow)"], explanation: "These psychological needs drive entrepreneurial behavior."}
+                ]
+            },
+            {
+                id: 4,
+                title: "Business Environment",
+                shortTitle: "Environment",
+                icon: "🌍",
+                gradient: "from-green-500 to-emerald-400",
+                description: "PESTLE, SWOT, and opportunity identification",
+                questions: [
+                    {q: "_____ is required to promote entrepreneurship.", options: ["Conducive environment", "Credit facilities", "Government support"], correct: 0, explanation: "Overall conducive conditions enable business growth."},
+                    {q: "_____ affects ability to acquire and utilize resources.", options: ["Business environment", "Policies", "Technology"], correct: 0, explanation: "Environment encompasses all internal/external factors."},
+                    {q: "Which is NOT non-financial assistance?", options: ["Credit guarantee", "Business incubator", "Tax incentives"], correct: 0, explanation: "Credit guarantees are financial; others are non-financial support."},
+                    {q: "Two ease of doing business indicators:", type: "fill", answer: "Time to start and Cost to start", explanation: "These measure regulatory efficiency and barriers."},
+                    {q: "Two business opportunities in Nigeria:", type: "fill", answer: "Market gaps and Unmet consumer needs", explanation: "Supply-demand gaps create entrepreneurial openings."},
+                    {q: "Cognitive process of identifying opportunities is called _____.", type: "fill", answer: "opportunity recognition", explanation: "The mental process of perceiving viable business chances."},
+                    {q: "Alvarez & Barney's three opportunity types:", type: "list", items: ["Discovery-based", "Creation-based", "Evaluation-based"], explanation: "Different ways opportunities come into existence."},
+                    {q: "Explain PESTLE and SWOT.", type: "theory", points: ["PESTLE: Political, Economic, Social, Technological, Legal, Environmental", "SWOT: Strengths, Weaknesses, Opportunities, Threats"], explanation: "PESTLE analyzes external macro factors; SWOT internal/external strategic factors."},
+                    {q: "Two competing strategies:", type: "theory", points: ["Cost Leadership: Lowest prices", "Differentiation: Unique value"], explanation: "Porter's generic strategies for competitive positioning."},
+                    {q: "Five determinants of opportunity identification:", type: "list", items: ["Prior knowledge", "Social networks", "Alertness", "Creativity", "Environmental scanning"], explanation: "Factors enhancing ability to spot opportunities."}
+                ]
+            },
+            {
+                id: 5,
+                title: "Creativity & Intellectual Property",
+                shortTitle: "IP & Creativity",
+                icon: "🎨",
+                gradient: "from-pink-500 to-rose-400",
+                description: "Patents, trademarks, copyrights, and creative processes",
+                questions: [
+                    {q: "Creativity is a _____ of generating and evaluating ideas.", type: "fill", answer: "process", explanation: "Creativity is systematic, not just random inspiration."},
+                    {q: "_____ makes meaningful new connections for possibilities.", type: "fill", answer: "Creativity", explanation: "Creativity enables diverse thinking and perspectives."},
+                    {q: "_____ gives inventors exclusive rights for limited time.", type: "fill", answer: "Patent", explanation: "Patents protect inventions and incentivize innovation."},
+                    {q: "_____ distinguishes goods/services of different enterprises.", type: "fill", answer: "Trademark", explanation: "Trademarks protect brand identity and prevent confusion."},
+                    {q: "Design forms: _____ and _____ designs.", type: "fill", answer: "industrial and artistic", explanation: "Covers functional and aesthetic design protections."},
+                    {q: "NOT a determinant of individual creativity:", options: ["Sensemaking", "Intelligence", "Opportunity discovery"], correct: 2, explanation: "Opportunity discovery is an outcome, not a determinant."},
+                    {q: "Coca-Cola is protected by trade secrets.", options: ["True", "False"], correct: 0, explanation: "True - Its formula is one of the most famous trade secrets."},
+                    {q: "Five organizational creativity determinants:", type: "list", items: ["Culture", "Leadership", "Resources", "Structure", "Rewards"], explanation: "Organizational factors enabling creative output."},
+                    {q: "Five forms of intellectual property:", type: "list", items: ["Patents", "Trademarks", "Copyrights", "Trade secrets", "Industrial designs"], explanation: "Legal mechanisms protecting creative/innovative output."},
+                    {q: "How companies discover trade secrets:", type: "list", items: ["Reverse engineering", "Competitive intelligence", "Employee movement", "Corporate espionage"], explanation: "Methods range from legal to illegal practices."}
+                ]
+            },
+            {
+                id: 6,
+                title: "Technological Entrepreneurship",
+                shortTitle: "Tech",
+                icon: "💻",
+                gradient: "from-cyan-500 to-blue-400",
+                description: "Digital transformation, tech readiness, and innovation",
+                questions: [
+                    {q: "_____ is new knowledge in equipment/software improving business processes.", type: "fill", answer: "Technology", explanation: "Technology as applied knowledge for improvement."},
+                    {q: "_____ recognizes opportunities around technological solutions.", type: "fill", answer: "Technological entrepreneurship", explanation: "Tech entrepreneurship focuses on tech-based solutions."},
+                    {q: "_____ monitors business/personal activities digitally.", type: "fill", answer: "Digital technology", explanation: "Digital tech enables monitoring and management."},
+                    {q: "Technology Readiness Index excludes:", options: ["Optimism", "Innovativeness", "Discomfort"], correct: 2, explanation: "Dimensions are Optimism, Innovativeness, Discomfort, Insecurity."},
+                    {q: "NOT an individual factor in tech entrepreneurship:", options: ["Prior knowledge", "Human capital", "Technology completeness"], correct: 2, explanation: "Technology completeness is firm-level, not individual."},
+                    {q: "Technology integration is important for competitive advantage.", options: ["True", "False"], correct: 0, explanation: "True - Essential for modern business competitiveness."},
+                    {q: "Five manufacturing technology benefits:", type: "list", items: ["Productivity", "Quality", "Cost reduction", "Speed", "Resource utilization"], explanation: "Manufacturing tech enhances operational efficiency."},
+                    {q: "Five ICT benefits in entrepreneurship:", type: "list", items: ["Communication", "Global markets", "Data management", "Customer service", "Cost reduction"], explanation: "ICT enables connectivity and market reach."},
+                    {q: "Five technologies piloting growth:", type: "list", items: ["AI", "Blockchain", "IoT", "Cloud Computing", "Big Data"], explanation: "Emerging technologies driving entrepreneurial innovation."},
+                    {q: "Five tech entrepreneurship challenges:", type: "list", items: ["High investment", "Obsolescence", "Skills gap", "Cybersecurity", "Resistance to change"], explanation: "Unique barriers related to cost, speed, and security."}
+                ]
+            },
+            {
+                id: 7,
+                title: "Innovation",
+                shortTitle: "Innovation",
+                icon: "⚡",
+                gradient: "from-orange-500 to-red-400",
+                description: "Creative destruction, innovation types, and adoption",
+                questions: [
+                    {q: "Schumpeter's _____ theory: small firms predominate in innovation.", type: "fill", answer: "creative destruction", explanation: "Innovation disrupts existing markets and creates new ones."},
+                    {q: "_____ is an idea perceived as new by adopters.", type: "fill", answer: "Innovation", explanation: "Novelty is in the eye of the adopter, not just objective newness."},
+                    {q: "_____ results from using new tools, techniques, or systems.", type: "fill", answer: "Technological change", explanation: "Results from implementing new technological means."},
+                    {q: "_____ introduces new or improved products for market needs.", type: "fill", answer: "Product innovation", explanation: "Focuses on new outputs meeting customer demands."},
+                    {q: "Innovation improves short-term performance and long-term competitiveness.", options: ["True", "False"], correct: 0, explanation: "True - Serves both immediate and strategic goals."},
+                    {q: "NOT a factor in innovation adoption rate:", options: ["Relative advantage", "Incompatibility", "Complexity"], correct: 1, explanation: "Compatibility (not Incompatibility) aids adoption."},
+                    {q: "Tornatzky & Fleischer's TOE framework excludes:", options: ["Technology", "Organization", "Innovation"], correct: 2, explanation: "TOE includes Technology, Organization, Environment contexts."},
+                    {q: "Five sources of innovation ideas:", type: "list", items: ["R&D", "Customer feedback", "Market research", "Competitor analysis", "Employee suggestions"], explanation: "Ideas come from multiple internal and external sources."},
+                    {q: "Five types of innovation:", type: "list", items: ["Product", "Process", "Marketing", "Organizational", "Business model"], explanation: "Innovation occurs across multiple business domains."},
+                    {q: "Five innovation financing sources:", type: "list", items: ["Venture capital", "Government grants", "Angel investors", "Bank loans", "Crowdfunding"], explanation: "Diverse funding from traditional and alternative sources."}
+                ]
+            },
+            {
+                id: 8,
+                title: "Family Business",
+                shortTitle: "Family",
+                icon: "👨‍👩‍👧‍👦",
+                gradient: "from-teal-500 to-green-400",
+                description: "Succession planning, governance, and continuity",
+                questions: [
+                    {q: "_____ is the transition of leadership between family members.", options: ["Successor", "Succession planning", "Incumbent"], correct: 1, explanation: "Succession planning manages leadership transitions."},
+                    {q: "_____ holds top position and must relinquish it for succession.", options: ["Founder", "Incumbent", "Sibling"], correct: 1, explanation: "Incumbent is the current leader to be replaced."},
+                    {q: "The family member assuming control is the _____.", options: ["Potential successor", "Founder", "Sibling"], correct: 0, explanation: "Potential successor is the next-generation leader."},
+                    {q: "Three key family business terms:", type: "fill", answer: "Succession, Governance, Professionalization", explanation: "Core concepts for family business continuity."},
+                    {q: "Family succession: both incumbent and successor are _____.", type: "fill", answer: "family members", explanation: "Keeps leadership within the family lineage."},
+                    {q: "Two Nigerian family business examples:", type: "fill", answer: "Dangote Group and Zenith Bank", explanation: "Major corporations with family involvement."},
+                    {q: "Five succession challenges:", type: "list", items: ["Incumbent resistance", "Family conflicts", "Unqualified successors", "Emotional attachment", "Unclear plans"], explanation: "Emotional and structural barriers to succession."},
+                    {q: "Four family business types:", type: "list", items: ["Founder-based", "Sibling partnership", "Cousin consortium", "Family dynasty"], explanation: "Evolution stages from founder to multi-generational."},
+                    {q: "Three family business goals:", type: "list", items: ["Wealth preservation", "Family harmony", "Business continuity"], explanation: "Balancing financial, relational, and operational aims."},
+                    {q: "Five successor qualities:", type: "list", items: ["Leadership", "Business acumen", "Family commitment", "Vision", "Emotional intelligence"], explanation: "Needs business skills and relationship abilities."}
+                ]
+            },
+            {
+                id: 9,
+                title: "Women Entrepreneurship",
+                shortTitle: "Women",
+                icon: "👩‍💼",
+                gradient: "from-rose-500 to-pink-400",
+                description: "Gender perspectives, drivers, and empowerment strategies",
+                questions: [
+                    {q: "_____ is women organizing factors of production, taking risks, and innovating.", type: "fill", answer: "Women entrepreneurship", explanation: "Active business creation and management by women."},
+                    {q: "Woman entrepreneur age range: _____ to _____ years.", type: "fill", answer: "18 and 55", explanation: "Economically active demographic definition."},
+                    {q: "Perception of one's own maleness/femaleness is _____.", type: "fill", answer: "gender identity", explanation: "Personal perception of one's gender."},
+                    {q: "NOT a push factor for women:", options: ["Boredom", "Unemployment", "Independence"], correct: 2, explanation: "Independence is a pull factor (attraction)."},
+                    {q: "NOT a pull factor for women:", options: ["Self-actualization", "Achievement", "Insecurity"], correct: 2, explanation: "Insecurity pushes; pull factors are positive attractions."},
+                    {q: "NOT a gender stereotype:", options: ["Masculinity", "Femininity", "Androgynous"], correct: 2, explanation: "Androgynous blends characteristics; not a stereotype."},
+                    {q: "Five drivers of women enterprises:", type: "list", items: ["Economic need", "Independence", "Achievement", "Family support", "Government policies"], explanation: "Motivations for women starting businesses."},
+                    {q: "Five inhibitors of women entrepreneurship:", type: "list", items: ["Limited finance", "Cultural barriers", "Lack of training", "Work-family conflict", "Limited networks"], explanation: "Structural barriers affecting women disproportionately."},
+                    {q: "Traditional vs Modern gender roles:", type: "compare", left: ["Traditional: Rigid roles, men providers, women caregivers"], right: ["Modern: Flexible, shared responsibilities, equal opportunities"], explanation: "Evolution from rigid to flexible role definitions."},
+                    {q: "Gender role stereotype definition and four dimensions:", type: "theory", points: ["Beliefs about gender-appropriate characteristics", "Dimensions: Traits, Behaviors, Occupations, Physical appearance"], explanation: "Socially constructed beliefs about gender norms."}
+                ]
+            },
+            {
+                id: 10,
+                title: "Social Entrepreneurship",
+                shortTitle: "Social",
+                icon: "🤝",
+                gradient: "from-indigo-500 to-purple-400",
+                description: "NGOs, social enterprises, and impact creation",
+                questions: [
+                    {q: "_____ is an independent non-profit pursuing public interest goals.", type: "fill", answer: "Non-governmental organization (NGO)", explanation: "Independent, non-state, non-profit entities."},
+                    {q: "_____ uses resources innovatively to catalyze social change.", type: "fill", answer: "Social entrepreneurship", explanation: "Applying business innovation to social problems."},
+                    {q: "_____ identifies and fills gaps in the social market (Kirzner).", type: "fill", answer: "Social entrepreneurship", explanation: "Spotting unmet social needs entrepreneurially."},
+                    {q: "Charity breeds laziness and dependency.", options: ["True", "False"], correct: 0, explanation: "True - Critique suggests charity creates unhealthy dependencies."},
+                    {q: "NOT a type of social entrepreneurship:", options: ["Social Bricoleur", "Constructionist", "Social Engineer"], correct: 2, explanation: "Types include Bricoleur, Constructionist, and Catalyst."},
+                    {q: "NOT a factor promoting social entrepreneurship:", options: ["Networking", "Social gathering", "Social marketing"], correct: 1, explanation: "Gathering is social; others are strategic factors."},
+                    {q: "NOT a social enterprise category:", options: ["Non-profits", "Public sector", "Social investment"], correct: 2, explanation: "Categories include non-profits, public sector, social businesses."},
+                    {q: "Seven social entrepreneurship areas in Nigeria:", type: "list", items: ["Education", "Healthcare", "Agriculture", "Environment", "Poverty", "Youth", "Women"], explanation: "Sectors with significant social gaps for intervention."},
+                    {q: "Five NGO roles in society:", type: "list", items: ["Service delivery", "Advocacy", "Capacity building", "Policy influence", "Community development"], explanation: "From direct service to systemic advocacy functions."},
+                    {q: "Six NGO funding sources:", type: "list", items: ["Donations", "Government", "Corporate sponsors", "Membership", "Events", "Enterprise activities"], explanation: "Diversified funding across philanthropic and commercial sources."}
+                ]
+            }
+        ];
+
+        // ==========================================
+        // STATE MANAGEMENT
+        // ==========================================
+        const state = {
+            currentView: 'dashboard',
+            currentTopic: null,
+            currentQuestion: 0,
+            score: 0,
+            answers: [],
+            streak: 0,
+            bestStreak: 0,
+            soundEnabled: true,
+            completed: new Set(),
+            correctAnswers: new Set(),
+            filter: 'all',
+            quizMode: 'topic' // 'topic' or 'quick'
+        };
+
+        // ==========================================
+        // INITIALIZATION
+        // ==========================================
+        document.addEventListener('DOMContentLoaded', () => {
+            loadProgress();
+            renderDashboard();
+            renderAllTopics();
+            updateStats();
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', handleKeyboard);
+        });
+
+        // ==========================================
+        // NAVIGATION & VIEWS
+        // ==========================================
+        function showView(viewName) {
+            document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+            document.getElementById(viewName + '-view').classList.add('active');
+            
+            // Update nav
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if(link.textContent.toLowerCase().includes(viewName)) {
+                    link.classList.add('active');
+                }
+            });
+            
+            state.currentView = viewName;
+            
+            if (viewName === 'review') renderReviewMode();
+        }
+
+        // ==========================================
+        // DASHBOARD RENDERING
+        // ==========================================
+        function renderDashboard() {
+            // Preview topics (first 4)
+            const preview = document.getElementById('preview-topics');
+            preview.innerHTML = topicsData.slice(0, 4).map(topic => createTopicCard(topic)).join('');
+            
+            // Continue studying section
+            const inProgress = topicsData.filter(t => {
+                const prog = getTopicProgress(t.id);
+                return prog > 0 && prog < 100;
+            });
+            
+            const continueSection = document.getElementById('continue-section');
+            const continueCards = document.getElementById('continue-cards');
+            
+            if (inProgress.length > 0) {
+                continueSection.classList.remove('hidden');
+                continueCards.innerHTML = inProgress.map(topic => createTopicCard(topic, true)).join('');
+            }
+        }
+
+        function createTopicCard(topic, compact = false) {
+            const progress = getTopicProgress(topic.id);
+            const answered = getTopicAnswered(topic.id);
+            
+            return `
+                <div class="topic-card glass" onclick="startTopicQuiz(${topic.id})">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="topic-icon bg-gradient-to-br ${topic.gradient}">
+                            ${topic.icon}
+                        </div>
+                        <div class="relative w-12 h-12">
+                            <svg class="w-full h-full progress-ring" viewBox="0 0 40 40">
+                                <circle class="text-slate-700" stroke-width="3" stroke="currentColor" fill="transparent" r="16" cx="20" cy="20"/>
+                                <circle class="text-emerald-400 progress-ring-circle" stroke-width="3" stroke-linecap="round" stroke="currentColor" fill="transparent" r="16" cx="20" cy="20" 
+                                    stroke-dasharray="100.53" stroke-dashoffset="${100.53 - (100.53 * progress / 100)}"/>
+                            </svg>
+                            <div class="absolute inset-0 flex items-center justify-center text-xs font-bold">
+                                ${Math.round(progress)}%
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="font-display text-lg font-bold mb-2">${topic.shortTitle}</h3>
+                    <p class="text-sm text-slate-400 mb-3 line-clamp-2">${topic.description}</p>
+                    <div class="flex items-center justify-between text-sm">
+                        <span class="text-slate-500">${answered}/${topic.questions.length} done</span>
+                        <span class="text-indigo-400 font-medium group-hover:translate-x-1 transition-transform">Start →</span>
+                    </div>
+                </div>
+            `;
+        }
+
+        // ==========================================
+        // TOPICS VIEW
+        // ==========================================
+        function renderAllTopics() {
+            const grid = document.getElementById('all-topics-grid');
+            const filtered = filterTopicsData();
+            
+            grid.innerHTML = filtered.map(topic => `
+                <div class="topic-card glass" onclick="startTopicQuiz(${topic.id})">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="topic-icon bg-gradient-to-br ${topic.gradient}">
+                            ${topic.icon}
+                        </div>
+                        <span class="badge ${getTopicProgress(topic.id) === 100 ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30' : 'badge-indigo'}">
+                            ${getTopicProgress(topic.id) === 100 ? 'Completed' : 'In Progress'}
+                        </span>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-2">${topic.title}</h3>
+                    <p class="text-sm text-slate-400 mb-4">${topic.description}</p>
+                    <div class="w-full bg-slate-700 rounded-full h-2 mb-3">
+                        <div class="bg-gradient-to-r ${topic.gradient} h-2 rounded-full transition-all" style="width: ${getTopicProgress(topic.id)}%"></div>
+                    </div>
+                    <div class="flex items-center justify-between text-sm">
+                        <span class="text-slate-500">${topic.questions.length} questions</span>
+                        <span class="text-indigo-400 font-medium">Study Now →</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterTopicsData() {
+            if (state.filter === 'all') return topicsData;
+            return topicsData.filter(t => {
+                const prog = getTopicProgress(t.id);
+                if (state.filter === 'completed') return prog === 100;
+                if (state.filter === 'incomplete') return prog < 100;
+                return true;
+            });
+        }
+
+        function filterTopics(filter) {
+            state.filter = filter;
+            document.querySelectorAll('.filter-tab').forEach(t => {
+                t.classList.toggle('active', t.dataset.filter === filter);
+            });
+            renderAllTopics();
+        }
+
+        // ==========================================
+        // QUIZ SYSTEM
+        // ==========================================
+        function startTopicQuiz(topicId) {
+            state.currentTopic = topicsData.find(t => t.id === topicId);
+            state.currentQuestion = 0;
+            state.score = 0;
+            state.answers = [];
+            state.quizMode = 'topic';
+            
+            showView('quiz');
+            renderQuestion();
+        }
+
+        function startQuickQuiz() {
+            // Mix 10 random questions from all topics
+            const allQuestions = [];
+            topicsData.forEach(topic => {
+                topic.questions.forEach((q, idx) => {
+                    allQuestions.push({
+                        ...q,
+                        topicId: topic.id,
+                        topicTitle: topic.title,
+                        originalIndex: idx
+                    });
+                });
+            });
+            
+            // Shuffle and take 10
+            const shuffled = allQuestions.sort(() => 0.5 - Math.random()).slice(0, 10);
+            
+            state.currentTopic = {
+                id: 'mixed',
+                title: 'Quick Mixed Quiz',
+                questions: shuffled
+            };
+            state.currentQuestion = 0;
+            state.score = 0;
+            state.answers = [];
+            state.quizMode = 'quick';
+            
+            showView('quiz');
+            renderQuestion();
+        }
+
+        function renderQuestion() {
+            const topic = state.currentTopic;
+            const q = topic.questions[state.currentQuestion];
+            const isMixed = state.quizMode === 'quick';
+            
+            // Update header
+            document.getElementById('quiz-topic-badge').textContent = isMixed ? q.topicTitle : topic.shortTitle;
+            document.getElementById('current-q').textContent = state.currentQuestion + 1;
+            document.getElementById('total-q').textContent = topic.questions.length;
+            document.getElementById('quiz-progress-bar').style.width = 
+                `${((state.currentQuestion) / topic.questions.length) * 100}%`;
+            
+            // Question text
+            document.getElementById('question-text').textContent = q.q;
+            
+            // Reset UI
+            document.getElementById('explanation-box').classList.add('hidden');
+            const nextBtn = document.getElementById('next-btn');
+            nextBtn.disabled = true;
+            nextBtn.classList.add('opacity-50', 'cursor-not-allowed');
+            nextBtn.textContent = state.currentQuestion === topic.questions.length - 1 ? 'Finish Quiz →' : 'Next Question →';
+            
+            const container = document.getElementById('options-container');
+            container.innerHTML = '';
+            
+            // Render based on question type
+            if (q.options) {
+                // Multiple choice
+                q.options.forEach((opt, idx) => {
+                    const btn = document.createElement('button');
+                    btn.className = 'option-btn';
+                    btn.innerHTML = `
+                        <span class="option-letter">${String.fromCharCode(65 + idx)}</span>
+                        <span>${opt}</span>
+                    `;
+                    btn.onclick = () => handleMCQAnswer(idx, btn);
+                    container.appendChild(btn);
+                });
+            } else {
+                // Theory/Fill/List question - show educational content
+                renderTheoryContent(q, container);
+            }
+            
+            // Animate
+            gsap.from('#question-text', {opacity: 0, y: 20, duration: 0.4});
+            gsap.from('.option-btn', {opacity: 0, x: -20, duration: 0.3, stagger: 0.08});
+        }
+
+        function renderTheoryContent(q, container) {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'space-y-4';
+            
+            // Show answer content based on type
+            if (q.type === 'fill') {
+                wrapper.innerHTML = `
+                    <div class="p-4 bg-indigo-500/10 border border-indigo-500/30 rounded-xl">
+                        <div class="text-sm text-indigo-300 mb-1">Answer:</div>
+                        <div class="text-lg font-semibold">${q.answer}</div>
+                    </div>
+                `;
+            } else if (q.type === 'list' && q.items) {
+                wrapper.innerHTML = `
+                    <ul class="theory-list">
+                        ${q.items.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                `;
+            } else if (q.type === 'theory' && q.points) {
+                wrapper.innerHTML = `
+                    <div class="space-y-3">
+                        ${q.points.map(point => `
+                            <div class="flex items-start gap-3 p-3 bg-white/5 rounded-xl">
+                                <span class="text-indigo-400 mt-0.5">•</span>
+                                <span>${point}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+            } else if (q.type === 'compare') {
+                wrapper.innerHTML = `
+                    <div class="compare-grid">
+                        <div class="compare-item">
+                            <div class="text-xs text-slate-400 mb-2">Traditional/Left</div>
+                            ${Array.isArray(q.left) ? q.left.map(i => `<div class="mb-1">• ${i}</div>`).join('') : `<div>• ${q.left}</div>`}
+                        </div>
+                        <div class="compare-item">
+                            <div class="text-xs text-slate-400 mb-2">Modern/Right</div>
+                            ${Array.isArray(q.right) ? q.right.map(i => `<div class="mb-1">• ${i}</div>`).join('') : `<div>• ${q.right}</div>`}
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // Add "Mark as Learned" button
+            const markBtn = document.createElement('button');
+            markBtn.className = 'btn-primary w-full mt-4';
+            markBtn.textContent = '✓ Mark as Learned';
+            markBtn.onclick = () => handleTheoryAnswer();
+            
+            wrapper.appendChild(markBtn);
+            container.appendChild(wrapper);
+        }
+
+        function handleMCQAnswer(selectedIndex, btnElement) {
+            const q = state.currentTopic.questions[state.currentQuestion];
+            const isCorrect = selectedIndex === q.correct;
+            const buttons = document.querySelectorAll('.option-btn');
+            
+            // Disable all
+            buttons.forEach((btn, idx) => {
+                btn.disabled = true;
+                if (idx === q.correct) {
+                    btn.classList.add('correct');
+                } else if (idx === selectedIndex && !isCorrect) {
+                    btn.classList.add('wrong');
+                }
+            });
+            
+            // Update score
+            if (isCorrect) {
+                state.score++;
+                state.streak++;
+                if (state.streak > state.bestStreak) state.bestStreak = state.streak;
+                playSound('correct');
+                if (state.streak >= 3) showStreak();
+            } else {
+                state.streak = 0;
+                playSound('wrong');
+            }
+            
+            // Show explanation
+            showExplanation(q.explanation);
+            
+            // Mark complete
+            markQuestionComplete(isCorrect);
+            
+            // Enable next
+            const nextBtn = document.getElementById('next-btn');
+            nextBtn.disabled = false;
+            nextBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+        }
+
+        function handleTheoryAnswer() {
+            state.score++;
+            state.streak++;
+            if (state.streak > state.bestStreak) state.bestStreak = state.streak;
+            playSound('correct');
+            
+            const q = state.currentTopic.questions[state.currentQuestion];
+            showExplanation(q.explanation);
+            markQuestionComplete(true);
+            
+            const nextBtn = document.getElementById('next-btn');
+            nextBtn.disabled = false;
+            nextBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+            
+            setTimeout(() => nextQuestion(), 1200);
+        }
+
+        function showExplanation(text) {
+            document.getElementById('explanation-text').textContent = text;
+            document.getElementById('explanation-box').classList.remove('hidden');
+            gsap.from('#explanation-box', {opacity: 0, height: 0, duration: 0.4});
+        }
+
+        function markQuestionComplete(isCorrect) {
+            const topicId = state.quizMode === 'quick' ? 
+                state.currentTopic.questions[state.currentQuestion].topicId : 
+                state.currentTopic.id;
+            const qIndex = state.quizMode === 'quick' ?
+                state.currentTopic.questions[state.currentQuestion].originalIndex :
+                state.currentQuestion;
+            
+            const key = `${topicId}-${qIndex}`;
+            state.completed.add(key);
+            if (isCorrect) state.correctAnswers.add(key);
+            
+            saveProgress();
+            updateStats();
+        }
+
+        function nextQuestion() {
+            state.currentQuestion++;
+            
+            if (state.currentQuestion >= state.currentTopic.questions.length) {
+                showResults();
+            } else {
+                renderQuestion();
+            }
+        }
+
+        function skipQuestion() {
+            state.streak = 0;
+            state.answers.push({skipped: true});
+            nextQuestion();
+        }
+
+        function exitQuiz() {
+            if (confirm('Exit quiz? Your progress will be saved.')) {
+                showView('dashboard');
+            }
+        }
+         // ==========================================
+        // RESULTS
+        // ==========================================
+        function showResults() {
+            showView('results');
+            
+            const total = state.currentTopic.questions.length;
+            const percentage = Math.round((state.score / total) * 100);
+            const skipped = state.answers.filter(a => a.skipped).length;
+            const wrong = total - state.score - skipped;
+            
+            // Animate progress circle
+            const circle = document.getElementById('result-progress');
+            const circumference = 2 * Math.PI * 90;
+            const offset = circumference - (percentage / 100) * circumference;
+            
+            setTimeout(() => {
+                circle.style.strokeDashoffset = offset;
+            }, 300);
+            
+            // Update text
+            document.getElementById('result-percentage').textContent = percentage + '%';
+            document.getElementById('result-correct').textContent = state.score;
+            document.getElementById('result-wrong').textContent = wrong;
+            document.getElementById('result-skipped').textContent = skipped;
+            
+            // Dynamic message
+            const title = document.getElementById('result-title');
+            const message = document.getElementById('result-message');
+            
+            if (percentage >= 80) {
+                title.textContent = 'Outstanding! 🎉';
+                message.textContent = 'Exceptional work! You\'ve mastered this material.';
+                triggerConfetti();
+            } else if (percentage >= 60) {
+                title.textContent = 'Great Job! 👏';
+                message.textContent = 'Solid understanding. Review missed questions to improve.';
+            } else if (percentage >= 40) {
+                title.textContent = 'Good Effort! 📚';
+                message.textContent = 'Keep practicing. You\'re building your knowledge.';
+            } else {
+                title.textContent = 'Keep Learning! 💪';
+                message.textContent = 'Don\'t give up. Review the material and try again.';
+            }
+            
+            updateStats();
+        }
+
+        function retakeQuiz() {
+            if (state.quizMode === 'quick') {
+                startQuickQuiz();
+            } else {
+                startTopicQuiz(state.currentTopic.id);
+            }
+        }
+
+        // ==========================================
+        // REVIEW MODE
+        // ==========================================
+        function showReviewMode() {
+            showView('review');
+        }
+
+        function renderReviewMode() {
+            const container = document.getElementById('review-content');
+            container.innerHTML = '';
+            
+            topicsData.forEach(topic => {
+                const topicSection = document.createElement('div');
+                topicSection.className = 'glass rounded-2xl p-6';
+                
+                let questionsHtml = topic.questions.map((q, idx) => {
+                    let answerContent = '';
+                    
+                    if (q.options) {
+                        answerContent = `
+                            <div class="space-y-2 mt-3">
+                                ${q.options.map((opt, i) => `
+                                    <div class="p-3 rounded-lg ${i === q.correct ? 'bg-emerald-500/20 border border-emerald-500/30 text-emerald-300' : 'bg-white/5 text-slate-400'}">
+                                        ${String.fromCharCode(65 + i)}. ${opt} ${i === q.correct ? '✓' : ''}
+                                    </div>
+                                `).join('')}
+                            </div>
+                        `;
+                    } else if (q.type === 'fill') {
+                        answerContent = `<div class="mt-3 p-3 bg-indigo-500/20 border border-indigo-500/30 rounded-lg text-indigo-300">Answer: ${q.answer}</div>`;
+                    } else if (q.type === 'list' && q.items) {
+                        answerContent = `
+                            <ul class="theory-list mt-3">
+                                ${q.items.map(item => `<li>${item}</li>`).join('')}
+                            </ul>
+                        `;
+                    } else if (q.type === 'theory' && q.points) {
+                        answerContent = `
+                            <div class="mt-3 space-y-2">
+                                ${q.points.map(point => `<div class="p-3 bg-white/5 rounded-lg border-l-2 border-indigo-500">${point}</div>`).join('')}
+                            </div>
+                        `;
+                    } else if (q.type === 'compare') {
+                        answerContent = `
+                            <div class="compare-grid mt-3">
+                                <div class="compare-item">
+                                    <div class="text-xs text-slate-400 mb-2">Column A</div>
+                                    ${Array.isArray(q.left) ? q.left.map(i => `<div class="mb-1 text-sm">• ${i}</div>`).join('') : q.left}
+                                </div>
+                                <div class="compare-item">
+                                    <div class="text-xs text-slate-400 mb-2">Column B</div>
+                                    ${Array.isArray(q.right) ? q.right.map(i => `<div class="mb-1 text-sm">• ${i}</div>`).join('') : q.right}
+                                </div>
+                            </div>
+                        `;
+                    }
+                    
+                    return `
+                        <div class="border-b border-white/10 last:border-0 py-4">
+                            <div class="flex items-start gap-3">
+                                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-xs font-bold">${idx + 1}</span>
+                                <div class="flex-1">
+                                    <p class="font-medium mb-2">${q.q}</p>
+                                    ${answerContent}
+                                    <div class="mt-3 text-sm text-slate-400 italic">
+                                        <span class="text-indigo-400">Note:</span> ${q.explanation}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+                
+                topicSection.innerHTML = `
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-br ${topic.gradient} flex items-center justify-center text-xl">
+                            ${topic.icon}
+                        </div>
+                        <div>
+                            <h3 class="font-display text-lg font-bold">${topic.title}</h3>
+                            <p class="text-sm text-slate-400">${topic.questions.length} questions</p>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        ${questionsHtml}
+                    </div>
+                `;
+                
+                container.appendChild(topicSection);
+            });
+        }
+
+        // ==========================================
+        // STATS & PROGRESS
+        // ==========================================
+        function getTopicProgress(topicId) {
+            const topic = topicsData.find(t => t.id === topicId);
+            let completed = 0;
+            topic.questions.forEach((_, idx) => {
+                if (state.completed.has(`${topicId}-${idx}`)) completed++;
+            });
+            return Math.round((completed / topic.questions.length) * 100);
+        }
+
+        function getTopicAnswered(topicId) {
+            const topic = topicsData.find(t => t.id === topicId);
+            let count = 0;
+            topic.questions.forEach((_, idx) => {
+                if (state.completed.has(`${topicId}-${idx}`)) count++;
+            });
+            return count;
+        }
+
+        function updateStats() {
+            // Total stats
+            const totalQuestions = topicsData.reduce((acc, t) => acc + t.questions.length, 0);
+            const completedCount = state.completed.size;
+            const totalProgress = Math.round((completedCount / totalQuestions) * 100);
+            
+            // Accuracy
+            const correctCount = state.correctAnswers.size;
+            const accuracy = completedCount > 0 ? Math.round((correctCount / completedCount) * 100) : 0;
+            
+            // Update DOM
+            document.getElementById('total-progress').textContent = totalProgress + '%';
+            document.getElementById('questions-done').textContent = completedCount;
+            document.getElementById('accuracy-rate').textContent = accuracy + '%';
+            document.getElementById('best-streak').textContent = state.bestStreak;
+            document.getElementById('streak-display').textContent = state.streak;
+        }
+
+        // ==========================================
+        // UTILITIES
+        // ==========================================
+        function triggerConfetti() {
+            const duration = 3000;
+            const end = Date.now() + duration;
+            
+            const colors = ['#6366f1', '#ec4899', '#8b5cf6', '#10b981', '#f59e0b'];
+            
+            (function frame() {
+                confetti({
+                    particleCount: 5,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 },
+                    colors: colors
+                });
+                confetti({
+                    particleCount: 5,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 },
+                    colors: colors
+                });
+                
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            }());
+        }
+
+        function showStreak() {
+            const streakEl = document.getElementById('streak-display');
+            gsap.fromTo(streakEl.parentElement, 
+                { scale: 1.5, color: '#fbbf24' },
+                { scale: 1, duration: 0.5, ease: "elastic.out(1, 0.3)" }
+            );
+        }
+
+        function toggleSound() {
+            state.soundEnabled = !state.soundEnabled;
+            const btn = document.getElementById('sound-btn');
+            
+            if (state.soundEnabled) {
+                btn.innerHTML = `
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
+                    </svg>
+                `;
+                btn.classList.remove('text-slate-500');
+            } else {
+                btn.innerHTML = `
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"></path>
+                    </svg>
+                `;
+                btn.classList.add('text-slate-500');
+            }
+        }
+
+        function playSound(type) {
+            if (!state.soundEnabled) return;
+            
+            try {
+                const AudioContext = window.AudioContext || window.webkitAudioContext;
+                if (!AudioContext) return;
+                
+                const ctx = new AudioContext();
+                const osc = ctx.createOscillator();
+                const gain = ctx.createGain();
+                
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                
+                if (type === 'correct') {
+                    // Happy major chord arpeggio
+                    const now = ctx.currentTime;
+                    osc.frequency.setValueAtTime(523.25, now); // C5
+                    osc.frequency.setValueAtTime(659.25, now + 0.1); // E5
+                    osc.frequency.setValueAtTime(783.99, now + 0.2); // G5
+                    gain.gain.setValueAtTime(0.3, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.4);
+                    osc.start(now);
+                    osc.stop(now + 0.4);
+                } else {
+                    // Sad descending tone
+                    const now = ctx.currentTime;
+                    osc.frequency.setValueAtTime(310, now);
+                    osc.frequency.setValueAtTime(277.18, now + 0.15);
+                    gain.gain.setValueAtTime(0.3, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.4);
+                    osc.start(now);
+                    osc.stop(now + 0.4);
+                }
+            } catch (e) {
+                // Silent fail
+            }
+        }
+
+        function handleKeyboard(e) {
+            if (state.currentView !== 'quiz') return;
+            
+            // Number keys for options
+            if (e.key >= '1' && e.key <= '9') {
+                const options = document.querySelectorAll('.option-btn:not([disabled])');
+                const idx = parseInt(e.key) - 1;
+                if (options[idx] && !options[idx].disabled) {
+                    options[idx].click();
+                }
+            }
+            
+            // Enter for next
+            if (e.key === 'Enter' || e.key === 'ArrowRight') {
+                const nextBtn = document.getElementById('next-btn');
+                if (!nextBtn.disabled) {
+                    nextQuestion();
+                }
+            }
+            
+            // Escape to exit
+            if (e.key === 'Escape') {
+                exitQuiz();
+            }
+        }
+
+        // ==========================================
+        // STORAGE
+        // ==========================================
+        function saveProgress() {
+            const data = {
+                completed: Array.from(state.completed),
+                correct: Array.from(state.correctAnswers),
+                bestStreak: state.bestStreak,
+                lastStudy: new Date().toISOString()
+            };
+            localStorage.setItem('entrepreneurshipHub', JSON.stringify(data));
+        }
+
+        function loadProgress() {
+            const saved = localStorage.getItem('entrepreneurshipHub');
+            if (saved) {
+                const data = JSON.parse(saved);
+                state.completed = new Set(data.completed || []);
+                state.correctAnswers = new Set(data.correct || []);
+                state.bestStreak = data.bestStreak || 0;
+                
+                // Check daily streak
+                if (data.lastStudy) {
+                    const last = new Date(data.lastStudy);
+                    const now = new Date();
+                    const diffDays = Math.floor((now - last) / (1000 * 60 * 60 * 24));
+                    
+                    if (diffDays === 1) {
+                        // Consecutive day
+                        state.streak = 1; // Will be updated during quiz
+                    } else if (diffDays === 0) {
+                        // Same day
+                        state.streak = 0;
+                    } else {
+                        // Streak broken
+                        state.streak = 0;
+                    }
+                }
+            }
+        }
+
+        // Prevent accidental navigation during quiz
+        window.addEventListener('beforeunload', (e) => {
+            if (state.currentView === 'quiz' && state.currentQuestion > 0) {
+                e.preventDefault();
+                e.returnValue = '';
+            }
+        });
